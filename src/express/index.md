@@ -18,6 +18,7 @@ npm install --save express-art-template
 ```js
 var express = require('express');
 var app = express();
+app.set('view engine', 'art');
 app.engine('art', require('express-art-template'));
 app.set('view options', {
     debug: process.env.NODE_ENV !== 'production'
